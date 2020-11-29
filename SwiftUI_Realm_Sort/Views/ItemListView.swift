@@ -40,7 +40,7 @@ struct ItemListView: View {
           delete(offsets: offsets)
         }
         .onMove { source, destination in
-          move(source: source, destination: destination)
+          move(sourceIndexSet: source, destination: destination)
         }
       }
     }
@@ -60,8 +60,8 @@ extension ItemListView {
     store.delete(id: deleteId)
   }
   
-  private func move(source: IndexSet, destination: Int) {
-    store.move(source: source, destination: destination)
+  private func move(sourceIndexSet: IndexSet, destination: Int) {
+    store.move(sourceIndexSet: sourceIndexSet, destination: destination)
   }
 }
 

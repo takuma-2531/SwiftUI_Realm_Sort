@@ -73,21 +73,21 @@ extension ItemStore {
     }
   }
   
-  func move(source: IndexSet, destination: Int) {
-    guard let sourceIndex = source.first else {
+  func move(sourceIndexSet: IndexSet, destination: Int) {
+    guard let source = sourceIndexSet.first else {
       return
     }
     
-    let moveId = items[sourceIndex].id
+    let moveId = items[source].id
     
-    if sourceIndex < destination {
-      for i in (sourceIndex + 1)...(destination - 1) {
+    if source < destination {
+      for i in (source + 1)...(destination - 1) {
         update(id: items[i].id, order: items[i].order - 1)
       }
       update(id: moveId, order: destination - 1)
       
-    } else if destination < sourceIndex {
-      for i in destination...(sourceIndex - 1) {
+    } else if destination < source {
+      for i in destination...(source - 1) {
         update(id: items[i].id, order: items[i].order + 1)
       }
       update(id: moveId, order: destination)
