@@ -8,7 +8,7 @@
 import RealmSwift
 
 class ItemDB: Object {
-  @objc dynamic var id = 0
+  @objc dynamic var id = ""
   @objc dynamic var title = ""
   @objc dynamic var order = 0
 

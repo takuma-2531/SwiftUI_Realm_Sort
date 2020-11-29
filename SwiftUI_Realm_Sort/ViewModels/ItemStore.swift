@@ -29,7 +29,7 @@ extension ItemStore {
       let realm = try Realm()
       
       let itemDB = ItemDB()
-      itemDB.id = UUID().hashValue
+      itemDB.id = UUID().uuidString
       itemDB.title = title
       itemDB.order = order
       try realm.write {
@@ -40,7 +40,7 @@ extension ItemStore {
     }
   }
   
-  func delete(id: Int) {
+  func delete(id: String) {
     objectWillChange.send()
     
     guard let itemDB = itemResults.first(where: { $0.id == id }) else {
@@ -57,7 +57,7 @@ extension ItemStore {
     }
   }
   
-  func update(id: Int, order: Int) {
+  func update(id: String, order: Int) {
     objectWillChange.send()
     
     do {

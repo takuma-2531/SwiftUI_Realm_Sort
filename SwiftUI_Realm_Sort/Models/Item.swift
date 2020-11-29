@@ -8,7 +8,7 @@
 import Foundation
 
 struct Item: Identifiable {
-  let id: Int
+  let id: String
   let title: String
   let order: Int
 }
