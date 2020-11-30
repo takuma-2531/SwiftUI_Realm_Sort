@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2646D7C425748772001BCF64 /* Pods_SwiftUI_Realm_Sort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D33758D82C923B3C469E7E /* Pods_SwiftUI_Realm_Sort.framework */; };
 		26C10025256BCD3900DF41F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C10024256BCD3900DF41F4 /* AppDelegate.swift */; };
 		26C10027256BCD3900DF41F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C10026256BCD3900DF41F4 /* SceneDelegate.swift */; };
 		26C10029256BCD3900DF41F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C10028256BCD3900DF41F4 /* ContentView.swift */; };
@@ -18,7 +19,6 @@
 		26C1004B256BEC9D00DF41F4 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1004A256BEC9D00DF41F4 /* ItemStore.swift */; };
 		26C1004E256BED4300DF41F4 /* ItemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C1004D256BED4300DF41F4 /* ItemMock.swift */; };
 		26C10051256BF21C00DF41F4 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C10050256BF21B00DF41F4 /* ItemListView.swift */; };
-		9F571061CBE63F3795B819A2 /* Pods_SwiftUI_Realm_Sort.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D33758D82C923B3C469E7E /* Pods_SwiftUI_Realm_Sort.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F571061CBE63F3795B819A2 /* Pods_SwiftUI_Realm_Sort.framework in Frameworks */,
+				2646D7C425748772001BCF64 /* Pods_SwiftUI_Realm_Sort.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

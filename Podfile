@@ -6,6 +6,6 @@ target 'SwiftUI_Realm_Sort' do
   use_frameworks!
 
   # Pods for SwiftUI_Realm_Sort
-  pod 'RealmSwift','~> 5.4.0'
+  pod 'RealmSwift','~> 10.1.0'
 
 end
