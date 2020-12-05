@@ -18,16 +18,16 @@ struct ItemListView: View {
         Button("プリント", action: {store.printRealm()})
         EditButton()
       }
+      .padding(.top)
       
       HStack {
         TextField("タイトルの入力", text: $title)
           .textFieldStyle(RoundedBorderTextFieldStyle())
-        Button("決定", action: {
-          store.create(title: title, order: items.count)
-          title = ""
-        })
+        Button("決定", action: create)
       }
-      .padding()
+      .padding(.leading)
+      .padding(.trailing)
+      
       List {
         ForEach(items) { item in
           HStack {
@@ -48,6 +48,11 @@ struct ItemListView: View {
 }
 
 extension ItemListView {
+  private func create() {
+    store.create(title: self.title, order: items.count)
+    self.title = ""
+  }
+  
   private func delete(offsets: IndexSet) {
     guard let index = offsets.first else {
       return
