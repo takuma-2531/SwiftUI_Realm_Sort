@@ -15,7 +15,7 @@ struct ItemListView: View {
   var body: some View {
     VStack {
       HStack {
-        Button("プリント", action: {store.printRealm()})
+//        Button("プリント", action: {store.printRealm()})
         EditButton()
       }
       .padding(.top)
@@ -41,6 +41,8 @@ struct ItemListView: View {
         }
         .onMove { source, destination in
           move(sourceIndexSet: source, destination: destination)
+//          print("source:      \(source.first!)")
+//          print("destination: \(destination)")
         }
       }
     }

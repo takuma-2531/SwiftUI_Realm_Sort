@@ -87,7 +87,7 @@ extension ItemStore {
       update(id: moveId, order: destination - 1)
       
     } else if destination < source {
-      for i in destination...(source - 1) {
+      for i in (destination...(source - 1)).reversed() {
         update(id: items[i].id, order: items[i].order + 1)
       }
       update(id: moveId, order: destination)
